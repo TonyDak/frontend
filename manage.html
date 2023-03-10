@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage</title>
+  <link rel="stylesheet" href="./css/manage.css">
+  <link rel="stylesheet" href="./fonts/fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/css/all.min.css">
+</head>
+
+<body onload="showProduct(); showUser(); showBills()">
+  <!--head-->
+  <div class="head">
+    <h1>QUẢN LÍ CỬA HÀNG</h1>
+  </div>
+  <!--body-->
+  <div class="body">
+    <div class="left">
+      <h4 class="qluser" onclick="popup_show_dsuser()">Quản lý user</h4>
+      <h4 class="qlsanpham" onclick="popup_show_dssp()">Danh sách sản phẩm</h4>
+      <h4 class="qldonhang" onclick="popup_show_bill()">Đơn hàng</h4>
+      <h4 class="trangchu" onclick="window.location.href = 'index.html'">Trở về trang chủ</h4>
+    </div>
+    <div class="list-user">
+      <div class="chucnang">
+        <button class="xoaall-user" type="button" onclick="deleteAllUser()" style="cursor:pointer;">Xóa tất cả</button>
+        <button class="themuser" type="button" onclick="popup_show_user2()" style="cursor:pointer;">Thêm user</button>
+      </div>
+      <div class="scroll-user">
+        <table border="1" id="listu">
+          
+        </table>
+      </div>
+    </div>
+    <div class="list-qlsp">
+      <div class="chucnang">
+        <button class="xoaall" type="button" onclick="deleteAllProdcut()" style="cursor:pointer;">Xóa tất cả</button>
+        <button class="themsanpham" type="button" onclick="popup_show_add()" style="cursor:pointer;">Thêm sản phẩm</button>
+      </div>
+      <div class="scroll-list">
+        <table border="1" id="list">
+          
+        </table>
+      </div>
+    </div>
+    <div class="list-bill">
+        <div id="rightsection" style="display: none;">
+          <div class="subsection">
+            <h1>TÌM KIẾM</h1>
+            <form>
+            <label for="name">Tên khách hàng</label>
+            <input type="text" id="name">
+            <label for="date">Ngày</label>
+            <input type="date" id="date">
+            <label for="status">Trạng thái</label>
+            <select id="statussearch">
+              <option value="Chưa xử lí">Chưa xử lí</option>
+              <option value="Đã xử lí">Đã xử lí</option>
+            </select>
+            <button type="button" onclick="searchBill()">Tìm</button>
+            </form>
+          </div>
+        </div>
+      <div class="scroll-listb">
+        <table border="1" id="listb">
+          
+        </table>
+      </div>
+    </div>
+    <!--add product-->
+    <div class="addproduct">
+      <button type="" class="close-login" onclick="popup_hide()">X</button>
+      <div class="add">
+        <form class="box" action="" method="post">
+          <h1>Sản phẩm </h1>
+          <div class="input-box">
+            <label for=""><b>ID</b></label><br>
+            <input id="id" type="text" required>
+          </div>
+          <div class="input-box">
+            <label for=""><b>Tên sản phẩm</b></label><br>
+            <input id="namepd" type="text" required>
+          </div>
+          <div class="input-box">
+            <label for=""><b>Loại sản phẩm</b> </label><br>
+            <input id="loai" type="text" required>
+          </div>
+          <div class="input-box">
+            <label for=""><b>Thương hiệu</b> </label><br>
+            <input id="thuonghieu" type="text" required>
+          </div>
+          <div class="input-box">
+            <label for=""><b>Dung tích</b> </label><br>
+            <input id="dungtich" type="text" required>
+          </div>
+          <div class="input-box">
+            <label for=""><b>Ảnh sản phẩm</b> </label><br>
+            <input id="hinhanh" type="file" onchange="changeimgadd(this)" required>
+          </div>
+          <div class="input-box">
+            <label for=""><b>Chi tiết</b> </label><br>
+            <input id="detail" type="text" required>
+          </div>
+          <div class="input-box">
+            <label for=""><b>Giá tiền</b> </label><br>
+            <input id="giatien" type="text" required>
+          </div>
+          <div class="input-box">
+            <input id="indexpd" type="hidden" required>
+          </div>
+          <div class="btn-box">
+            <button id="addpd" type="button" onclick="addProduct()">
+              OK
+            </button>
+            <button id="editpd" type="button" style="display: none;" onclick="updateProduct()">
+              EDIT
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!---->
+  <!--adduseer-->
+  <div class="adduser">
+    <button type="" class="close-login" onclick="popup_hide_user()">X</button>
+    <div class="add">
+        <form class="box" action="" method="post">
+        <h1>Đăng ký</h1>
+        <div class="input-box">
+          <label for="fullname"><b>Họ và tên</b></label> <br>
+          <input type="text" id="fullname" required>
+          <input id="fullnameerror" type="hidden"></input>
+        </div>
+        <div class="input-box">
+          <label for=""><b>Địa chỉ</b> </label><br>
+          <input id="address" type="text" required>
+          <input id="addresserror" type="hidden"></input>
+        </div>
+        <div class="input-box">
+          <label for=""><b>Số điện thoại</b> </label><br>
+          <input id="phone" type="text" required>
+          <input id="phoneerror" type="hidden"></input>
+        </div>
+        <div class="input-box">
+          <label for=""><b>Tài khoản</b> </label><br>
+          <input id="usernameSignUp" type="text" required>
+          <input id="usererror" type="hidden"></input>
+        </div>
+        <div class="input-box">
+          <label for=""><b>Email</b> </label><br>
+          <input id="emailSignUp" type="email" required>
+          <input id="emailerror" type="hidden"></input>
+        </div>
+        <div class="input-box">
+          <label for=""><b>Mật khẩu</b></label><br>
+          <input id="passwordSignUp" type="password" required>
+          <input id="passworderror" type="hidden"></input>
+        </div>
+        <div class="input-box2">
+          <label for=""><b>Nhập lại mật khẩu</b></label><br>
+          <input id="passwordSignUp2" type="password" required>
+          <input id="password2error" type="hidden"></input>
+        </div>
+        <div class="input-box">
+          <input id="indexu" type="hidden" required>
+        </div>
+        <div class="btn-box">
+          <button id="addu" type="button" onclick="createUser()">ĐĂNG KÝ</button>
+          <button id="edituser" type="button" style="display: none;" onclick="updateUser()">
+            EDIT
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="infobill">
+    <button type="" class="close-login" onclick="popup_bill_hide()">X</button>
+    <div class="add">
+        <form class="box" action="" method="post">
+        <div class="input-box">
+          <label for="thong tin don hng"><b>Thông tin đơn hàng</b></label> <br>
+          <input type="text" id="info" disabled required>
+        </div>
+        <div class="input-box">
+          <label for=""><b>Ngày tạo đơn hàng</b> </label><br>
+          <input id="date" type="text" disabled required>
+        </div>
+        <div class="input-box">
+          <label for=""><b>Tên khách hàng</b></label><br>
+          <input id="fullnameb" type="text" disabled required>
+        </div>
+        <div class="input-box">
+          <label for=""><b>Địa chỉ</b> </label><br>
+          <input id="addressb" type="text" disabled required>
+        </div>
+        <div class="input-box">
+          <label for=""><b>Số điện thoại</b> </label><br>
+          <input id="phoneb" type="text" disabled required>
+        </div>
+        <div class="input-box">
+          <label for=""><b>Tổng số tiền</b></label><br>
+          <input id="total" type="text" disabled required>
+        </div>
+        <div class="input-box3">
+          <label for=""><b>Trạng thái</b></label><br>
+          <input id="status" type="text" disabled required>
+          <button type="button" onclick="checkVstatus()"><i class="fa-solid fa-check"></i></button>
+          <button type="button" onclick="checkXstatus()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="input-box">
+          <input id="indexb" type="hidden" disabled required>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <script src="./js/main.js"></script>
+  <script src="./js/qlsp.js"></script>
+  <script src="./js/qluser.js"></script>
+  <script src="./js/qlbill.js"></script>
+</body>
+
+</html>

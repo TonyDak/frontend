@@ -1,0 +1,565 @@
+/* HEADER mobile */
+/* Phần nút hiện menu */
+#mainbar-button-mobile {
+    display: none;
+    cursor: pointer;
+}
+
+#mainbar-button-mobile i {
+    font-size: 30px;
+    color: rgb(123, 121, 121);
+    background-color: rgb(246, 246, 246);
+    border: 2px solid rgb(123, 121, 121);
+    border-radius: 5px;
+    padding: 4px 8px;
+}
+
+/* Phần nút hiện menu end */
+/* Phần bảng menu */
+.right-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: leftright linear 0.2s;
+    display: none;
+}
+
+#main-menu-mobile-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    max-width: 100%;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform linear 0.2s;
+}
+.main-menu-mobile-close label i {
+    cursor: pointer;
+    width: 40px;
+    margin-top: 10px;
+    margin-right: 15px;
+    padding: 0 5px;
+}
+
+.main-menu-mobile-close label i:hover {
+    background-color: #2D946E;
+    color: white;
+}
+
+.main-menu-mobile-list {
+    margin: 0;
+    padding: 0 20px;
+}
+
+.main-menu-mobile-list li {
+    list-style: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.main-menu-mobile-list li>label {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main-menu-mobile-list li>label:hover {
+    background-color: #2D946E;
+    color: white;
+}
+
+.main-menu-mobile-list li .main-menu-mobile-top {
+    display: block;
+    font-size: 30px;
+    margin: 20px 10px;
+}
+
+.main-menu-mobile-list .sub-menu-mobile {
+    padding: 0;
+}
+
+.main-menu-mobile-list .sub-menu-mobile li {
+    list-style: none;
+    border-top: 1px solid black;
+}
+
+.main-menu-mobile-list .sub-menu-mobile li:last-child {
+    border-bottom: 1px solid black;
+}
+
+.main-menu-mobile-list .sub-menu-mobile a {
+    display: block;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: black;
+}
+
+.main-menu-mobile-list .sub-menu-mobile a:hover {
+    background-color: #2D946E;
+    color: white;
+}
+
+.main-menu-mobile-list li>button {
+    background: none;
+    border: none;
+    padding: 15px 0;
+    display: block;
+}
+
+.nav-mobile-checked:checked~#main-menu-mobile-box {
+    transform: translateX(0%);
+}
+
+.nav-mobile-checked:checked~.right-mobile {
+    display: block;
+}
+
+/* Phần bảng menu end */
+/* HEADER moblie END  */
+
+
+
+@media screen and (max-width: 600px) {
+
+    /* banner */
+    #bannerSection img.slideshow {
+        height: 250px;
+    }
+
+    /* product */
+    .container-main {
+        margin: 10px;
+    }
+
+    #card {
+        margin: 10px 20px;
+        flex-basis: calc(100%);
+    }
+
+    #card img {
+        width: 70%;
+        height: 250px;
+    }
+
+    #card:hover img {
+        width: 80%;
+        height: 280px;
+    }
+
+    /* product info*/
+    #container-box #productInfo #info .right #productname,
+    #container-box #productInfo #info .right #productprice,
+    #container-box #productInfo #info .right h1 {
+        font-size: 17pt;
+        margin: 10px 0;
+    }
+
+    #container-box #productInfo #info .right #productbrand,
+    #container-box #productInfo #info .right #productdetail {
+        font-size: 14pt;
+    }
+
+    /* GIO HANG */
+    #cart {
+        padding: 40px 5px;
+    }
+
+    #cart a {
+        font-size: 20px;
+    }
+
+    #cart th {
+        font-size: 15px;
+    }
+
+    #cart #bill-box,
+    #cart-box {
+        padding: 5px;
+    }
+
+    #bill-box h1,
+    #cart-box h1,
+    .total {
+        font-size: 23px;
+    }
+    .cart-list .pd-cart {
+        width: 200px;
+        min-width: none;
+    }
+    .cart-list tr th:first-child p{
+        display: block;
+        width: 100%;
+    }
+    .cart-list .pd-cart img{
+        display: none;
+    }
+    .cart-list .tien,.cart-list .soluong,.cart-list .tamtinh,.cart-list .xoa{
+        width: calc((100%-185px)/4);
+    }
+    .tien, .tamtinh {
+        display: none;
+    }
+    .hienthi {
+        margin: 10px 0;
+        font-size: 23px;
+    }
+
+    /* TIM KIEM */
+    #searchsection #searchextend {
+        font-size: 12pt;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #searchsection #searchextend div:first-child {
+        width: auto;
+        margin-bottom: 20px;
+    }
+
+    #searchsection #searchextend div:last-child {
+        width: auto;
+    }
+
+    /* MAIL */
+    #mail #customermail {
+        width: 250px;
+    }
+
+    /* FOOTER    */
+    #foot .topfoot {
+        display: block;
+    }
+
+    #foot .topfoot .footmenu {
+        width: 100%;
+    }
+
+    #foot .topfoot .footmenu img {
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+
+    /* banner */
+    #bannerSection img.slideshow {
+        height: 400px;
+    }
+
+    /* Product */
+    .container-main {
+        margin: 10px;
+    }
+
+    #card {
+        flex-basis: calc(100%/2);
+    }
+
+    #card .product-item {
+        height: 350px;
+
+    }
+
+    #card img {
+        width: 80%;
+        height: 230px;
+    }
+
+    #card:hover img {
+        width: 90%;
+        height: 250px;
+    }
+
+    #container-box #productInfo #info .right #productname,
+    #container-box #productInfo #info .right #productprice,
+    #container-box #productInfo #info .right h1 {
+        font-size: 20pt;
+        margin: 10px 0;
+    }
+
+    #container-box #productInfo #info .right #productbrand,
+    #container-box #productInfo #info .right #productdetail {
+        font-size: 17pt;
+    }
+
+    /* GIO HANG */
+    #cart {
+        padding: 40px 5px;
+    }
+
+    #cart a {
+        font-size: 20px;
+    }
+
+    #cart th {
+        font-size: 18px;
+    }
+
+    #cart #bill-box,
+    #cart-box {
+        padding: 5px;
+    }
+
+    #bill-box h1,
+    #cart-box h1,
+    .total {
+        font-size: 25px;
+    }
+
+    .cart-list .pd-cart {
+        width: 200px;
+        min-width: none;
+    }
+    .cart-list tr th:first-child p{
+        display: block;
+        width: 100%;
+    }
+    .cart-list .pd-cart img{
+        display: none;
+    }
+    .cart-list .tien,.cart-list .soluong,.cart-list .tamtinh,.cart-list .xoa{
+        width: calc((100%-185px)/4);
+    }
+    .tien {
+        display: none;
+    }
+
+    .hienthi {
+        margin: 10px 0;
+        font-size: 25px;
+    }
+
+    /* tim Kiem */
+    #searchsection #searchextend {
+        font-size: 17pt;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #searchsection #searchextend div:first-child {
+        width: auto;
+        margin-bottom: 20px;
+    }
+
+    #searchsection #searchextend div:last-child {
+        width: auto;
+    }
+
+    /* MAIL */
+    #mail #customermail {
+        width: 250px;
+    }
+
+    /* FOOTER    */
+
+    #foot .topfoot .footmenu {
+        width: 50%;
+    }
+
+}
+
+@media screen and (min-width: 901px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+
+    /* banner */
+    #bannerSection img.slideshow {
+        height: 400px;
+    }
+    .container-main {
+        margin: 10px;
+    }
+
+    #card {
+        flex-basis: calc(100%/3);
+    }
+
+    #card img {
+        width: 80%;
+        height: 230px;
+    }
+
+    #card:hover img {
+        width: 90%;
+        height: 280px;
+    }
+
+    /* Product */
+    #container-box #productInfo #info .right #productname,
+    #container-box #productInfo #info .right #productprice,
+    #container-box #productInfo #info .right h1 {
+        font-size: 25pt;
+        margin: 10px 0;
+    }
+
+    #container-box #productInfo #info .right #productbrand,
+    #container-box #productInfo #info .right #productdetail {
+        font-size: 17pt;
+    }
+
+    
+    /* GIO HANG */
+    #cart {
+        padding: 40px 5px;
+    }
+
+    #cart a {
+        font-size: 20px;
+    }
+
+    #cart th {
+        font-size: 18px;
+    }
+
+    #cart #bill-box,
+    #cart-box {
+        padding: 5px;
+    }
+
+    #bill-box h1,
+    #cart-box h1,
+    .total {
+        font-size: 25px;
+    }
+    .hienthi {
+        margin: 10px 0;
+        font-size: 25px;
+    }
+
+    /* banner end */
+
+
+    /* tim Kiem */
+    #searchsection #searchextend {
+        font-size: 20pt;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #searchsection #searchextend div:first-child {
+        width: auto;
+        margin-bottom: 20px;
+    }
+
+    #searchsection #searchextend div:last-child {
+        width: auto;
+    }
+
+    /* MAIL */
+    #mail #customermail {
+        width: 250px;
+    }
+
+    /* FOOTER    */
+
+    #foot .topfoot .footmenu {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    /* header */
+    .nav-right {
+        width: 100%;
+        justify-content: right;
+    }
+
+    #mainbar #main {
+        width: 100%;
+    }
+
+    .left {
+        width: 40%;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .mainbar-checkbox-mobile {
+        width: 30%;
+    }
+
+    #mainbar-button-mobile {
+        display: block;
+        width: 45px;
+    }
+
+    /* header-end */
+
+    /* container  */
+    #container-main {
+        width: 90%;
+    }
+
+    /* mail  */
+    /* footer  */
+
+
+
+
+
+
+
+    /* form đăng ký */
+    #signup {
+        width: 500px;
+        margin: 10px auto;
+    }
+
+    #signupform .col {
+        width: 100%;
+    }
+
+    #signupform .col input {
+        width: 400px;
+    }
+
+    #signupform #btnsignup {
+        margin: 20px auto 0;
+    }
+
+    #signupform p {
+        margin: 15px auto 0;
+    }
+
+    /* form đăng ký end */
+    /* Info san pham */
+    #container-box #productInfo #info {
+        margin: 0;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+        padding: 30px 10px 20px;
+    }
+
+    #container-box #productInfo #info .left #imgbig {
+        max-width: 400px;
+    }
+
+    #container-box #productInfo #info .left {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    #container-box #productInfo #info .right {
+        width: 100%;
+    }
+}

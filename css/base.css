@@ -1,0 +1,47 @@
+
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 80%;
+    line-height: 16px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.grid{
+    width: 1200px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+.grid__full-width{
+    width: 100%;
+}
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrapper{
+    background-color: #EFEFEF;
+}
+/*animation*/
+@keyframes topdown{
+	0% {transform: translateY(-800px)}
+	100% {transform: translateY(0)}
+}
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+@keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
+@keyframes leftright{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

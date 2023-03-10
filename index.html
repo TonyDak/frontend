@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sản phẩm chăm sóc tóc</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./fonts/fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/reponsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorig in>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onLoad="showProduct(); checklogin(); showCart()">
+    <div id="customalert"></div>
+    <header id="header">
+        <!-- Header - Top bar -->
+        <div id="topbar">
+            <div class="grid">
+                <div id="header__navbar">
+                    <ul class="nav-left hide-on-mobile-tablet">
+                        <li id="nav-address">
+                            Địa chỉ:
+                            <span style="color: red;"> Việt Nam </span>
+                        </li>
+                        <li id="nav-contact">
+                            <span class="nav-tirtle">Liên hệ:</span>
+                            <a href="https://www.facebook.com/" class="nav-icon-link"><i
+                                    class="nav-icon-link fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/" class="nav-icon-link"><i
+                                    class="nav-icon-link fa-brands fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/" class="nav-icon-link"><i
+                                    class="nav-icon-link fa-brands fa-youtube"></i> </a>
+                        </li>
+                    </ul>
+                    <ul class="nav-right">
+                        <li id="nav-cart">
+                            <button class="nav-item-link" onclick="show_cart()">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                GIỎ HÀNG
+                            </button>
+                        </li>
+                        <li id="nav-login">
+                            <button class="nav-item-link" onclick="showform()">
+                                <i class="fa-regular fa-user"></i>
+                                ĐĂNG NHẬP
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Header - Mainbar -->
+        <nav id="mainbar">
+            <div id="main">
+
+                <div class="mainbar-checkbox-mobile">
+                    <label for="nav-mobile-checkbox" id="mainbar-button-mobile">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                </div>
+                <div class="left">
+                    <a id="logo" href="index.html"><img
+                            src="https://clmensstore.com/wp-content/uploads/2022/02/Orange-Black-Bats-Happy-Halloween-Instagram-Post-1080-x-500-px-220-x-102-px.png"
+                            alt=""></a>
+                </div>
+                <div class="right hide-on-mobile-tablet">
+                    <ul class="main-menu">
+                        <li><a class="active" href="index.html" onclick="show_pd()">TRANG CHỦ</a></li>
+                        <li><a>TẠO KIỂU<i class="fas fa-caret-down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="index.html?svt&0">SÁP VUỐT TÓC</a>
+                                </li>
+                                <li><a href="index.html?btp&0">BỘT TẠO PHỒNG</a>
+                                </li>
+                                <li><a href="index.html?psl&0">PRE-STYLING</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><a>CHĂM SÓC TÓC<i class="fas fa-caret-down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="index.html?dgx&0">DẦU GỘI - XẢ</a>
+                                </li>
+                                <li><a href="index.html?ddt&0">DẦU DƯỠNG TÓC</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><button onClick="showSearch()">TÌM KIẾM <i
+                                    class="fa-solid fa-magnifying-glass"></i></button></li>
+                    </ul>
+                </div>
+                <input type="checkbox" hidden class="nav-mobile-checked" id="nav-mobile-checkbox">
+                <label class="right-mobile"></label>
+                <div id="main-menu-mobile-box">
+                    <div for="nav-mobile-checkbox" class="main-menu-mobile-close" style="text-align: right;">
+                        <label for="nav-mobile-checkbox">
+                            <i class="fa-solid fa-xmark" style="font-size: 40px;"></i>
+                        </label>
+                    </div>
+                    
+                    <ul class="main-menu-mobile-list">
+                        <li><label for="nav-mobile-checkbox" onClick="showSearch()">TÌM KIẾM <i
+                            class="fa-solid fa-magnifying-glass"></i></label></li>
+                        <li>
+                            <a class="main-menu-mobile-top">TẠO KIỂU<i class="fas fa-caret-down"></i></a>
+                            <ul class="sub-menu-mobile">
+                                <li><a href="index.html?svt&0">SÁP VUỐT TÓC</a>
+                                </li>
+                                <li><a href="index.html?btp&0">BỘT TẠO PHỒNG</a>
+                                </li>
+                                <li><a href="index.html?psl&0">PRE-STYLING</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="main-menu-mobile-top">CHĂM SÓC TÓC<i class="fas fa-caret-down"></i></a>
+                            <ul class="sub-menu-mobile">
+                                <li><a href="index.html?dgx&0">DẦU GỘI - XẢ</a>
+                                </li>
+                                <li><a href="index.html?ddt&0">DẦU DƯỠNG TÓC</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- FORM ĐĂNG NHẬP ĐĂNG KÝ -->
+    <div id="user" class="modal">
+        <div id="login">
+            <form id="loginform">
+                <button type="button" class="close" onClick="closeform()"><i class="fa-solid fa-xmark"></i></button>
+                <h1>ĐĂNG NHẬP</h1>
+                <div class="logininfo">
+                    <div class="col">
+                        <label for="usernameLogin">Tên đăng nhập:</label>
+                        <input type="text" id="usernameLogin">
+                        <div id="usernameerror">Bạn chưa nhập tên đăng nhập</div>
+                        <label for="passwordLogin">Mật khẩu:</label>
+                        <input type="password" id="passwordLogin">
+                        <div id="passwordloginerror">Bạn chưa nhập mật khẩu</div>
+                    </div>
+                </div>
+                <button onclick="login()" id="btnlogin">ĐĂNG NHẬP</button>
+                <p>Bạn chưa có tài khoản? <a href="#" onClick="showSignUp()">Đăng ký</a></p>
+            </form>
+        </div>
+        <div id="signup">
+            <form id="signupform">
+                <button type="button" class="close" onClick="closeform()"><i class="fa-solid fa-xmark"></i></button>
+                <h1>ĐĂNG KÝ</h1>
+                <div class="signupinfo">
+                    <div class="col">
+                        <label for="fullname">Họ và tên: </label>
+                        <input type="text" id="fullname">
+                        <div id="fullnameerror">Họ tên nhập không đúng</div>
+                        <label for="address">Địa chỉ: </label>
+                        <input type="text" id="address">
+                        <div id="addresserror">Địa chỉ nhập không đúng</div>
+                        <label for="phone">Số điện thoại: </label>
+                        <input type="text" id="phone">
+                        <div id="phoneerror">Số điện thoại nhập không đúng</div>
+                    </div>
+                    <div class="col">
+                        <label for="usernameSignUp">Tên đăng nhập: </label>
+                        <input type="text" id="usernameSignUp">
+                        <div id="usererror">Tên đăng nhập nhập không đúng</div>
+                        <label for="emailSignUp">Email: </label>
+                        <input type="text" id="emailSignUp">
+                        <div id="emailerror">Email nhập không đúng</div>
+                        <label for="passwordSignUp">Mật khẩu: </label>
+                        <input type="password" id="passwordSignUp">
+                        <div id="passworderror">Mật khẩu nhập không đúng</div>
+                        <label for="passwordSignUp2">Nhập lại mật khẩu: </label>
+                        <input type="password" id="passwordSignUp2">
+                        <div id="password2error">Mật khẩu không trùng khớp</div>
+                    </div>
+                </div>
+                <button onclick="createUser()" id="btnsignup">ĐĂNG KÝ</button>
+                <p>Trở về trang <a href="#" onClick="showLogin()">Đăng nhập</a></p>
+            </form>
+        </div>
+    </div>
+    <!-- SearchSection  -->
+    <div id="searchsection">
+        <button class="close" onClick="closeSearch()"><i class="fa-solid fa-xmark"></i></button>
+        <div class="search-input">
+            <input type="text" placeholder="Tìm kiếm" id="search-text" onkeyup="search()">
+        </div>
+        <button class="filter-product" onclick="showextend()">
+            <p>Lọc</p>
+            <i class="fa-solid fa-filter icon-filter"></i>
+        </button>
+        <div id="searchextend" class="">
+            <div>
+                <select id="typesearch" onchange="search()">
+                    <option class="ops" value="all" selected>LOẠI</option>
+                    <option class="ops" value="svt">SÁP VUỐT TÓC</option>
+                    <option class="ops" value="btp">BỘT TẠO PHỒNG</option>
+                    <option class="ops" value="psl">PRE-STYLING</option>
+                    <option class="ops" value="dgx">DẦU GỘI - XẢ</option>
+                    <option class="ops" value="ddt">DẦU DƯỠNG TÓC</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" id="pricefrom" onchange="search()" placeholder="Giá từ"> &mdash; <input type="text"
+                    id="priceto" onchange="search()" placeholder="Đến">
+            </div>
+        </div>
+        <div id="searchresult" style="list-style: none;"></div>
+        <div id="page1"></div>
+    </div>
+    <!-- BANNER-->
+    <div id="bannerSection">
+        <div>
+            <img class="slideshow" src="./img/Bia_web_demo_2.jpg" alt="">
+            <img class="slideshow" src="./img/Dark-Brown-New-Product-Announcement-Instagram-Story.png" alt="">
+            <img class="slideshow" src="https://clmensstore.com/wp-content/uploads/2022/10/MIXED.png" alt="">
+        </div>
+    </div>
+    <!--        Container       -->
+    <div id="container-box">
+        <div class="container-main" class="container">
+            <ul id="product">
+                <!-- Sản phẩm ở đây-->
+            </ul>
+            <ul id="cart">
+                <a href="index.html"><i class="fa-solid fa-left-long"></i> QUAY VỀ</a>
+                <div id="bill-box"></div>
+                <div id="cart-box">
+                    <h1>GIỎ HÀNG</h1>
+                    <table class="cart-list">
+
+                    </table>
+                    <div class="total"><b>TỔNG: </b><i class="total-money"></i></div>
+                    <div class="hienthi">
+                        <div class="action-buy" onclick="checkCart()">THANH TOÁN</div>
+                    </div>
+                </div>
+            </ul>
+            <div id="productInfo" class="modal">
+                <div id="info">
+                    <button class="close" onclick="closeProductInfo()"><i class="fa-solid fa-xmark"></i></button>
+                    <div class="left">
+                        <img id="imgbig" src="">
+                    </div>
+                    <div class="right">
+                        <p id="productname"></p>
+                        <p id="productprice"></p>
+                        <p id="productbrand"></p>
+                        <p id="productdetail"></p>
+                        <h1>Số lượng:</h1>
+                        <div>
+                            <button class="quantitydown" onclick="downSL_info()">-</button>
+                            <input class="sl-info" loai="text" disabled value=1>
+                            <button class="quantityup" onclick="upSL_info()">+</button>
+                            <button class="addtocart" onclick="addCart()">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="page">
+                <!--Số trang ở đây-->
+            </div>
+        </div>
+    </div>
+    <div id="mail">
+        <h1>Nhận thông tin khuyến mãi mới nhất</h1>
+        <p>Để lại email của bạn để nhận những thông tin khuyến mãi mới nhất từ chúng tôi</p>
+        <input type="email" id="customermail" placeholder="Email">
+        <button type="button">&#62;</button>
+    </div>
+    <div id="foot">
+            <div class="topfoot">
+                <div class="footmenu">
+                    <img src="https://clmensstore.com/wp-content/uploads/2022/02/Orange-Black-Bats-Happy-Halloween-Instagram-Post-1080-x-500-px-220-x-102-px.png"
+                        alt="Since1999">
+                </div>
+                <div class="footmenu">
+                    <h1>Thông tin hữu ích</h1>
+                    <a href="file/contact1.html">Hướng dẫn bảo hành</a><br>
+                    <a href="file/contact2.html">Quy định đổi trả sản phẩm</a>
+                </div>
+                <div class="footmenu">
+                    <h1>Giới thiệu</h1>
+                    <a href="file/contact4.html">Danh sách cửa hàng</a><br>
+                    <a href="file/contact4.html">Dành cho đại lý</a>
+                </div>
+                <div class="footmenu">
+                    <h1>Thông tin liên hệ</h1>
+                    <p>Địa chỉ: 273 An Dương Vương, P3, Quận 5, TPHCM</p>
+                    <p>Số điện thoại: 0566490523 </p>
+                </div>
+            </div>
+            <div class="botfoot">
+                <p>2018 &#169; Copyright Since1999. All Rights Reserved.</p>
+            </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/qluser.js"></script>
+</body>
+
+</html>

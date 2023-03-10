@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.head{
+    background-color: black;
+    height: 75px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.body{
+    position: relative;
+    display: flex;
+}
+.chucnang{
+    width: max-content;
+    position: absolute;
+    right: 30px;
+    top: 0;
+}
+.themsanpham, .xoaall, .xoaall-user, .themuser{
+    height: 25px;
+}
+.left{
+    border: 1px solid black;
+    height: max-content;
+    width: 20%;
+    background-color: whitesmoke;
+    padding: 15px;
+}
+h4{
+    padding: 15px;
+}
+h4:active{
+    transform: translateY(2px);
+}
+.scroll-list{
+    margin-top: 25px;
+    height: 800px;
+    overflow: scroll;
+}
+.scroll-user{
+    margin-top: 25px;
+    height: 800px;
+    overflow: scroll;
+}
+.scroll-listb{
+    height: 750px;
+    overflow: scroll;
+}
+/*qluser*/
+.list-user{
+    width: 80%;
+    display: block;
+}
+#listu{
+    width: 100%;
+}
+.user td{
+    padding-left: 5px;
+}
+.adduser{
+    border-radius: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.adduser .add{
+    margin: 20px;
+}
+.adduser input{
+    padding: 5px;
+    height: 30px;
+    width: 300px;
+    border-radius: 99px;
+}
+.add h1,div{
+    padding: 10px;
+}
+.btn-box button{
+    background-color: rgb(107, 105, 105);
+    color: white;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+}
+.btn-box button:active{
+    transform: translateY(1px);
+}
+/*qlsp*/
+.list-qlsp{
+    width: 80%;
+    display: none;
+}
+#list{
+    width: 100%;
+}
+.sp td{
+    padding-left: 5px;
+}
+.sp img{
+    height: 100px;
+    width: 100px;
+}
+.addproduct{
+    border-radius: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.addproduct .add{
+    margin: 20px;
+}
+.addproduct input{
+    padding: 5px;
+    height: 30px;
+    width: 300px;
+    border-radius: 99px;
+}
+.add h1,div{
+    padding: 10px;
+}
+.btn-box button{
+    background-color: rgb(107, 105, 105);
+    color: white;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+}
+.btn-box button:active{
+    transform: translateY(1px);
+}
+.close-login{
+    border-radius: 99px;
+    font-size: large;
+    height: 30px;
+    width: 30px;
+}
+/*bill*/
+.list-bill{
+    width: 80%;
+    display: none;
+}
+#listb{
+    width:100%;
+}
+.infobill{
+    border-radius: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.infobill .add{
+    margin: 20px;
+}
+.infobill input{
+    padding: 5px;
+    height: 30px;
+    width: 300px;
+    border-radius: 99px;
+    color: white;
+}
+.add div{
+    padding: 10px;
+}
+.close-login{
+    border-radius: 99px;
+    font-size: large;
+    height: 30px;
+    width: 30px;
+}
+.input-box3 input{
+    width: 200px;
+}
+.input-box3 button{
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.subsection{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid black;
+}

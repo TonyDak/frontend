@@ -841,7 +841,7 @@ function checklogin() {
   </li>
 
   <li id="nav-logout">
-  <button class="nav-item-link" onClick="logout(\'index.html\')">
+  <button id="btnlogout" class="nav-item-link" onClick="logout(\'index.html\')">
   ĐĂNG XUẤT
   <i class="fa-solid fa-right-from-bracket"></i>
   </button>

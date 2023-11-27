@@ -834,7 +834,7 @@ function checklogin() {
       </button>
     </li>
     <li id="nav-cart">
-      <button class="nav-item-link" onclick="show_cart()">
+      <button class="nav-item-link" id="giohang" onclick="show_cart()">
           <i class="fa-solid fa-cart-shopping"></i>
           GIỎ HÀNG
       </button>
@@ -848,7 +848,7 @@ function checklogin() {
   </li>`
     } else {
       s = `<li id="nav-cart">
-      <button class="nav-item-link" onclick="show_cart()">
+      <button class="nav-item-link" id="giohang" onclick="show_cart()">
           <i class="fa-solid fa-cart-shopping"></i>
           GIỎ HÀNG
       </button>

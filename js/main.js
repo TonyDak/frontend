@@ -574,7 +574,7 @@ function showProduct() {
             <div class="product-name">${productArray[i].name}</div>
             <div class="product-price">${currency(productArray[i].price)}</div>
             <button class="icon-btn" onClick="addCart(${productArray[i].id})"><i class="fa-sharp fa-solid fa-cart-plus"></i></button>
-            <button class="buy-now" onclick="showProductInfo('${productArray[i].id}')">MUA NGAY</button>
+            <button id="buy-now1" onclick="showProductInfo('${productArray[i].id}')">MUA NGAY</button>
       </div>
     </li>`;
       dem++;
@@ -610,7 +610,7 @@ function showProduct() {
             <div class="product-name">${arrtempt[i].name}</div>
             <div class="product-price">${currency(arrtempt[i].price)}</div>
             <button class="icon-btn" onClick="addCart(${arrtempt[i].id})"><i class="fa-sharp fa-solid fa-cart-plus"></i></button>
-            <button class="buy-now" onclick="showProductInfo('${arrtempt[i].id}')">MUA NGAY</button>
+            <button id="buy-now2" onclick="showProductInfo('${arrtempt[i].id}')">MUA NGAY</button>
       </div>
     </li>`;
       dem++;
@@ -977,7 +977,7 @@ function showProductSearch(tmpArr) {
                     <div class="product-name">${item.name}</div>
                     <div class="product-price">${currency(item.price)}</div>
                     <button class="icon-btn" onClick="addToCart(${item.id})"><i class="fa-sharp fa-solid fa-cart-plus"></i></button>
-                    <button class="buy-now" onclick="showProductInfo('${item.id}')">MUA NGAY</button>
+                    <button id="buy-now3" onclick="showProductInfo('${item.id}')">MUA NGAY</button>
               </div>
             </li>`;
         return s;

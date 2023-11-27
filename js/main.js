@@ -976,7 +976,7 @@ function showProductSearch(tmpArr) {
                     <img src="${item.img}" alt="">
                     <div class="product-name">${item.name}</div>
                     <div class="product-price">${currency(item.price)}</div>
-                    <button class="icon-btn" onClick="addToCart(${item.id})"><i class="fa-sharp fa-solid fa-cart-plus"></i></button>
+                    <button id="icon-btn1" onClick="addToCart(${item.id})"><i class="fa-sharp fa-solid fa-cart-plus"></i></button>
                     <button id="buy-now3" onclick="showProductInfo('${item.id}')">MUA NGAY</button>
               </div>
             </li>`;
